@@ -1,0 +1,117 @@
+// Imports
+@import "colors.scss";
+// Vendors
+@import "../vendors/css/normalize.scss";
+@import "../vendors/css/animation.underline.scss";
+@import "../vendors/css/jquery.fullPage.scss";
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	background: #fff;
+	font-size: 0.8em;
+	font-family: 'Montserrat', Calibri, Arial, sans-serif;
+	color: $darkFont;
+}
+
+a, button {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+// Boxes
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+// Sections
+#section0 {
+    background-image: url('../img/header.jpg');
+}
+#section1 {
+    @include gradientLeftRight(#fd5454, #fd6854);
+}
+#section2 {
+    @include gradientLeftRight(#35ae65, #4dc891);
+}
+
+// Header
+
+.content {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.main-title h1 {
+    text-transform: uppercase;
+	font-size: 4.2em;
+	letter-spacing: 0.1em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.main-title h1 .thin {
+	font-weight: 200;
+}
+
+.main-title span.header-top {
+    padding-left: 80px;
+    text-align: right;
+    color: #fff;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 13px;
+    font-family: "proxima nova", "Helvetica", arial, sans-serif;
+}
+
+.main-title span.header-top::after{
+    content: "";
+    margin-top: 11px;
+    display: block;
+    background-color: #fff;
+    height: 2px;
+    width: 170px;
+}
+
+.main-title span.header-link {
+    text-align: right;
+    margin-top: 30px;
+    display: block;
+}
+
+.main-title span.header-link a{
+    color: #fff;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 13px;
+    font-family: "proxima nova", "Helvetica", arial, sans-serif;
+}
