@@ -1,5 +1,8 @@
-// Side Pagination
+/*********************************************
+Side Navigation
+**********************************************/
 var sectionNameHeight;
+var windowHeight = $(window).height();
 
 function sidePagination(sectionNameHeight) {
 
@@ -7,7 +10,6 @@ function sidePagination(sectionNameHeight) {
 	var separation = 1/6;
 
 	// Current Heights
-	var windowHeight = $(window).height();
 	var numberHeight = $('.sidePagination .number').height();
 
 	// Settings heights
@@ -20,7 +22,18 @@ function sidePagination(sectionNameHeight) {
 	$('.sidePagination .section-name h2').css('top', sectionNameHeight - 45);
 }
 
-// Transition Animations 
+/*********************************************
+Center in Div
+**********************************************/
+
+function centerInDiv() {
+	var divHeight = $('.v-center').height();
+	var divHeight = $('.v-center').css('top', (( windowHeight - divHeight ) / 2 ) - 30);
+}
+
+/*********************************************
+Transition Animations
+**********************************************/
 
 var easing = 'easeInOutCubic';
 
@@ -44,8 +57,15 @@ function onLeave() {
 	$('.sidePagination .number').fadeOut();
 }
 
+// Trigger on Load
+
+$(document).ready(function(){
+	centerInDiv();
+});
+
 // Retrigger layout formating when resizing
 
 $(window).resize(function () {
     sidePagination(sectionNameHeight);
+    centerInDiv();
 });

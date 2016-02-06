@@ -1,4 +1,6 @@
 
+var sections = ['Cumulus Web Design', "Agence", 'Amazing', 'Simple'];
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
 
@@ -7,16 +9,23 @@ $(document).ready(function() {
         navigation: true,
         navigationPosition: 'right',
         animateAnchor: true,
-        fixedElements: ['sidePagination'],
+        fixedElements: ['.sidePagination', '.header'],
         
         // Sections
-        anchors: ['Cumulus Web Design', 'Powerful', 'Amazing', 'Simple'],
-        navigationTooltips: ['Cumulus Web Design', 'Powerful', 'Amazing', 'Simple'],
-        menu : ['Cumulus', 'Powerful', 'Amazing', 'Simple'],
+        anchors: sections,
+        navigationTooltips: sections,
+        menu : sections,
         
         // Afterload callbacks
 
         afterLoad: function(anchorLink, index){
+            if(index == 1)
+            {
+                $('.main-title').css('width', '760px');
+                $('.sidePagination').hide();
+            }
+            else
+                $('.sidePagination').show();
             afterLoad();
             var number = (index - 1);
             $('.sidePagination .number').text('0' + number);
@@ -27,9 +36,9 @@ $(document).ready(function() {
         },
         
         // OnLeave callbacks
-        onLeave: function(index, nextIndex, direction){
+        onLeave: function(index, nextIndex, direction)
+        {
             onLeave();
         }
-
     });
 });

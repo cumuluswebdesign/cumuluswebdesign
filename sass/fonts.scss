@@ -1,6 +1,92 @@
+/*********************************************
+Fonts
+**********************************************/
+
 $mainFont : 'proxima nova', 'sans-serif';
 
-// Side Lines
+/*********************************************
+Main title
+**********************************************/
+
+.title-container {
+
+	text-transform: uppercase;
+	color: $paleFont;
+
+	span.top {
+		font-size: 1em;
+		font-weight: 200;
+		letter-spacing: 0.6em;
+	}
+
+	h2 {
+		margin: 0;
+		margin-top: 20px;
+		font-size: 3em;
+		font-weight: 300;
+		letter-spacing: 0;
+	}
+
+	h2.strong {
+		font-weight: 700;
+	}
+
+	h2:after {
+		content: '';
+		display: block;
+		margin-top: 40px;
+		height: 3px;
+		width: 60px;
+		background-color: $paleFont;
+	}
+
+}
+
+.text {
+
+	margin-top: 50px;
+	max-width: 500px;
+
+	.dark {
+		color: $darkFont;
+	}
+
+	color: $paleFont;
+
+	p {
+		font-family: $mainFont;
+		font-size: 1.4em;
+		font-weight: 200;
+		line-height: 1.6em;
+	}
+}
+
+.button {
+
+	margin-top: 45px;
+
+	.dark {
+		color: $darkFont;
+	}
+
+	a, a:hover, a:focus {
+		color: $paleFont;
+		font-family: $mainFont;
+		font-size: 1.2em;
+		font-weight: 200;
+		letter-spacing: 0.4em;
+		text-transform: uppercase;
+	}
+
+	a:hover {
+		opacity: 0.6;
+	}
+}
+
+
+/*********************************************
+Side lines
+**********************************************/
 
 .fancy {
   line-height: 0.5;
