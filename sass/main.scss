@@ -1,9 +1,11 @@
 // Imports
 @import "colors.scss";
+@import "fonts.scss";
 // Vendors
 @import "../vendors/css/normalize.scss";
 @import "../vendors/css/animation.underline.scss";
 @import "../vendors/css/jquery.fullPage.scss";
+@import "../vendors/css/jquery-ui.min.scss";
 
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
@@ -36,13 +38,89 @@ a {
     height: 100%;
 }
 
+.hide{
+    opacity: 0;
+}
+
+/*********************************************
+NAVGATION
+**********************************************/
+
+// Side Navigation
+
+.sidePagination{
+    // Font
+    font-family: $mainFont;
+    color: $paleFont;
+    // Layout
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    padding-left: 5%;
+}
+
+// Lines
+
+.sidePagination .top, .sidePagination .inner, .sidePagination .bottom {
+    display: block;
+    width: 45px;
+    margin: 0;
+}
+
+.sidePagination .border {
+    border-right: 1px $paleFont solid;
+    width: 100%;
+    height: 100%;
+}
+
+// Number
+
+.sidePagination span.number {
+    display: block;
+    font-size: 6em;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+// Section Name
+
+.sidePagination .section-name {
+    margin: 0;
+    display: inline-block;
+}
+
+.sidePagination .section-name h2 {
+    display: block;
+    position: relative;
+    left: 51px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 200;
+    transform-origin: 0 100%;
+    -ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+    transform: rotate(270deg);
+}
+
+// Navigation Dots
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background-color: #fff;
+}
+
 // Sections
+
 #section0 {
     background-image: url('../img/header.jpg');
 }
+
 #section1 {
     @include gradientLeftRight(#fd5454, #fd6854);
 }
+
 #section2 {
     @include gradientLeftRight(#35ae65, #4dc891);
 }

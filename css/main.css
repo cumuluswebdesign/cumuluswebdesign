@@ -1,4 +1,36 @@
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0c424+0,f8da98+100 */
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 200;
+}
+
+.fancy span {
+  display: inline-block;
+  position: relative;
+}
+
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid white;
+  top: 0px;
+  width: 400%;
+}
+
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
@@ -504,6 +536,83 @@ html.fp-enabled,
   height: auto !important;
 }
 
+/*! jQuery UI - v1.11.4 - 2016-02-05
+* http://jqueryui.com
+* Includes: core.css
+* Copyright jQuery Foundation and other contributors; Licensed MIT */
+.ui-helper-hidden {
+  display: none;
+}
+
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.ui-helper-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  font-size: 100%;
+  list-style: none;
+}
+
+.ui-helper-clearfix:before, .ui-helper-clearfix:after {
+  content: "";
+  display: table;
+  border-collapse: collapse;
+}
+
+.ui-helper-clearfix:after {
+  clear: both;
+}
+
+.ui-helper-clearfix {
+  min-height: 0;
+}
+
+.ui-helper-zfix {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  filter: Alpha(Opacity=0);
+}
+
+.ui-front {
+  z-index: 100;
+}
+
+.ui-state-disabled {
+  cursor: default !important;
+}
+
+.ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -541,6 +650,68 @@ a {
 .content {
   width: 100%;
   height: 100%;
+}
+
+.hide {
+  opacity: 0;
+}
+
+/*********************************************
+NAVGATION
+**********************************************/
+.sidePagination {
+  font-family: "proxima nova", "sans-serif";
+  color: #ffffff;
+  z-index: 1;
+  position: fixed;
+  height: 100%;
+  width: 20%;
+  padding-left: 5%;
+}
+
+.sidePagination .top, .sidePagination .inner, .sidePagination .bottom {
+  display: block;
+  width: 45px;
+  margin: 0;
+}
+
+.sidePagination .border {
+  border-right: 1px #ffffff solid;
+  width: 100%;
+  height: 100%;
+}
+
+.sidePagination span.number {
+  display: block;
+  font-size: 6em;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sidePagination .section-name {
+  margin: 0;
+  display: inline-block;
+}
+
+.sidePagination .section-name h2 {
+  display: block;
+  position: relative;
+  left: 51px;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 200;
+  transform-origin: 0 100%;
+  -ms-transform: rotate(270deg);
+  /* IE 9 */
+  -webkit-transform: rotate(270deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(270deg);
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background-color: #fff;
 }
 
 #section0 {

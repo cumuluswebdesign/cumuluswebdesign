@@ -1,0 +1,35 @@
+$mainFont : 'proxima nova', 'sans-serif';
+
+// Side Lines
+
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 200;
+}
+
+.fancy span {
+  display: inline-block;
+  position: relative;  
+}
+
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid white;
+  top: 0px;
+  width: 400%;
+}
+
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
